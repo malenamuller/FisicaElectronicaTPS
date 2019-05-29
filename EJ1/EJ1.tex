@@ -1,1 +1,29 @@
 \section*{\color{olive}Ejercicio 1: TITULO}
+
+% \begin{circuitikz}[scale=1.2]\draw
+% (0,0) node[ground] {}
+% to[V=$e(t)$, *-*] (0,2) to[C=4<\nano\farad>] (2,2)
+% to[R, l_=.25<\kilo\ohm>, *-*] (2,0)
+% (2,2) to[R=1<\kilo\ohm>] (4,2)
+% to[C, l_=2<\nano\farad>, *-*] (4,0)
+% (5,0) to[I, i_=$a(t)$, -*] (5,2) -- (4,2)
+% (0,0) -- (5,0)
+% (0,2) -- (0,3) to[L, l=2<\milli\henry>] (5,3) -- (5,2)
+%
+% {[anchor=south east] (0,2) node {1} (2,2) node {2} (4,2) node {3}}
+% ;\end{circuitikz}
+
+\begin{figure}[h!]
+  \begin{center}
+    \begin{circuitikz}
+    \draw (0,0)
+(0,0) node[ground] {}
+      to[V,v=$U_q$] (0,2) % The voltage source
+      to[short] (2,2)
+      to[R=$R_1$] (2,0) % The resistor
+	node[ground]{};
+      to[short] (0,0);
+    \end{circuitikz}
+    \caption{My first circuit.}
+  \end{center}
+\end{figure}
