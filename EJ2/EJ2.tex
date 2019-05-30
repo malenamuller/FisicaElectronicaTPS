@@ -1,1 +1,36 @@
 \section*{\color{olive}Ejercicio 2: C\'alculo y simulaci\'on de una funci\'on transferencia de tensi\'on}
+
+\begin{figure}[!ht]
+ \begin{center}
+    \begin{circuitikz}[american]
+    \draw (0,3) to[V,v=$V_{in}$] (0,0) % The voltage source
+(0,3)  to[short] (1,3) to[R, l2_=$R_G$ and $50\Omega$] 
+(2,3)  to[short] (3,3) to[C=$C_{in}$] (4,3) to[short] (5.5,3) 
+%to[R=$R_G$]  (2,3)  to[short] (3,3) to[C=$c_{in}$] (4,3) to[short] (5.5,3) 
+(6,3) node[npn]{}
+(0,0) to[short] (6,0) to[R=$R_E$] (6,2.5)
+(4.5,0) to[R=$R_2$] (4.5,3) to[R=$R_1$] (4.5,6) to[short] (6,6) to[R=$R_C$] (6,3.5)
+ to[C=$C_{out}$] (9,3.5) node[anchor=west] {OUT} (9,3.5)
+ to[R=$R_L$] (9,0) to[short] (6,0)
+(7.5,0) to[pC=$C_E$] (7.5,2.5) to[short] (6,2.5)
+(4.5,6)  to[V, v=$V_{cc}$] (0,6) node[ground]{}
+(2.5,3) node[anchor=south] {IN} 
+(4.5,0) node[ground]{}
+;
+    \end{circuitikz}
+    \caption{\color{cyan}Circuito empleado para medir la curva caracter\'istica de un diodo.}
+\end{center}
+\end{figure}
+
+
+Siendo
+\begin{itemize}
+\item $ R_1 = 100k\Omega$
+\item $ R_2 = 27k\Omega$
+\item $ R_C = 11.2k\Omega$
+\item $ R_E = 3k\Omega$
+\item $ R_L = 10k\Omega$
+\item $ C_{in} = 20nF$
+\item $ C_{out} = 10nF$
+\item $ C_E = 2\mu F$
+\end{itemize}

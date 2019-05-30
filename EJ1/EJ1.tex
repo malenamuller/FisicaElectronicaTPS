@@ -1,17 +1,6 @@
 \section*{\color{olive}Ejercicio 1: Medici\'on de curvas caracter\'isticas de diodos}
 
-% \begin{circuitikz}[scale=1.2]\draw
-% (0,0) node[ground] {}
-% to[V=$e(t)$, *-*] (0,2) to[C=4<\nano\farad>] (2,2)
-% to[R, l_=.25<\kilo\ohm>, *-*] (2,0)
-% (2,2) to[R=1<\kilo\ohm>] (4,2)
-% to[C, l_=2<\nano\farad>, *-*] (4,0)
-% (5,0) to[I, i_=$a(t)$, -*] (5,2) -- (4,2)
-% (0,0) -- (5,0)
-% (0,2) -- (0,3) to[L, l=2<\milli\henry>] (5,3) -- (5,2)
-%
-% {[anchor=south east] (0,2) node {1} (2,2) node {2} (4,2) node {3}}
-% ;\end{circuitikz}
+
 
 \begin{figure}[h!]
  \begin{center}
@@ -26,41 +15,12 @@
 	to[short] (1,0) node[ground]{}
 	(1,0) to[short] (0,0);
     \end{circuitikz}
-    \caption{Circuito empleado para medir la curva caracter\'istica de un diodo.}
+    \caption{\color{cyan}Circuito empleado para medir la curva caracter\'istica de un diodo.}
 \end{center}
 \end{figure}
 
 
-\begin{circuitikz}[american]
- \draw (0,0) 
-to[isource, l=$I_0$]  	%Vertical
-(0,3) -- (2,3)				%linea horizontal arriba entre las dos primeras ramas \\
-to[R=$R_1$] 				%Vertical
-(2,0) -- (0,0);				%linea horizontal abajo entre dos primeras ramas \\
- \draw (2,3) -- (4,3) 
-to[R=$R_2$]				%Vertical
-(4,0) -- (2,0);
-\draw (2,0) node[ground] {};
- \end{circuitikz}
-
-\begin{circuitikz}[american]
- \draw (0,0) to[isource, l=$I_0$] (0,3)
- to[short, -*, i=$I_0$] (2,3)
- to[R=$R_1$, i>_=$i_1$] (2,0) -- (0,0);
- \draw (2,3) -- (4,3)
- to[R=$R_2$, i>_=$i_2$]
- (4,0) to[short, -*] (2,0);
 
 
 
 
-
-
-
-
-
-
-
-
-
- \end{circuitikz}
