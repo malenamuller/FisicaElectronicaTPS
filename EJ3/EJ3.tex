@@ -4,13 +4,15 @@
  \begin{center}
     \begin{circuitikz}[american]
     \draw (0,3) to[V,v=$V_{AC}$] (0,1.5)to[V,v=$V_{DC}$] (0,0) % The voltage sources
-(0,3) to[R, R=$R_G$] (2,3)  to[R, l2_=$R$ and $200k\Omega$] (4,3) to[short] (4,1.5) node[fulldiodeshape]{} 
-(4,1.5) to[short] (4,0) to[short] (0,0)
+(0,3) to[R, R=$R_G$] (2,3)  to[R, R=$R$] (4,3)  node[anchor=west] {OUT} 
+(4,0) to[Do] (4,3)
+(4,0) to[short] (0,0)
+(2,0) node[ground]{}
+(2,3) node[anchor=south] {IN} 
 ;
     \end{circuitikz}
     \caption{\color{cyan}Circuito empleado para medir la curva caracter\'istica de un diodo.}
 \end{center}
 \end{figure}
 
-
-
+Siendo $R = 200k\Omega$.

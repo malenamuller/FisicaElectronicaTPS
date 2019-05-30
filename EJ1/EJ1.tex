@@ -8,14 +8,53 @@
     \draw (0,3)
 	%(0,0) node[ground] {}
       to[V,v=$V_{cc}$] (0,0) % The voltage source
-     (0,3) to[short] (1,3) node[fulldiodeshape]{} 
-	(1,3) to[short] (2,3)
+(0,3) to[Do] (2,3)
+%  (0,3) to[short] (1,3) node[fulldiodeshape]{} 
+%	(1,3) to[short] (2,3)
       to[R=$R_1$] (2,0) % The resistor
 	to[short] (2,0)
 	to[short] (1,0) node[ground]{}
 	(1,0) to[short] (0,0);
     \end{circuitikz}
-    \caption{\color{cyan}Circuito empleado para medir la curva caracter\'istica de un diodo.}
+    \caption{\color{cyan}Circuito empleado para medir la curva caracter\'istica de un diodo rectificador.}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[h!]
+ \begin{center}
+    \begin{circuitikz}
+    \draw (0,3)
+	%(0,0) node[ground] {}
+      to[V,v=$V_{cc}$] (0,0) % The voltage source
+(0,3) to[zDo] (2,3)
+%  (0,3) to[short] (1,3) node[fulldiodeshape]{} 
+%	(1,3) to[short] (2,3)
+      to[R=$R_1$] (2,0) % The resistor
+	to[short] (2,0)
+	to[short] (1,0) node[ground]{}
+	(1,0) to[short] (0,0);
+    \end{circuitikz}
+    \caption{\color{cyan}Circuito empleado para medir la curva caracter\'istica de un diodo Zener.}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[h!]
+ \begin{center}
+    \begin{circuitikz}
+    \draw (0,3)
+	%(0,0) node[ground] {}
+      to[V,v=$V_{cc}$] (0,0) % The voltage source
+(0,3) to[leDo] (2,3)
+%  (0,3) to[short] (1,3) node[fulldiodeshape]{} 
+%	(1,3) to[short] (2,3)
+      to[R=$R_1$] (2,0) % The resistor
+	to[short] (2,0)
+	to[short] (1,0) node[ground]{}
+	(1,0) to[short] (0,0);
+    \end{circuitikz}
+    \caption{\color{cyan}Circuito empleado para medir la curva caracter\'istica de un diodo  led.}
 \end{center}
 \end{figure}
 
