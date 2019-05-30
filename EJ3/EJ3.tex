@@ -1,1 +1,26 @@
-\section*{\color{olive}Ejercicio 3: TITULO}
+\section*{\color{olive}Ejercicio 3: Simulaci\'on de la respuesta en frecuencia de un circuito en condiciones iniciales}
+
+
+\begin{figure}[h!]
+ \begin{center}
+    \begin{circuitikz}[american]
+    \draw (0,3) to[V,v=$V_{in}$] (0,0) % The voltage source
+(0,3)  to[short] (1,3) to[R, l2_=$R_G$ and $50\Omega$] 
+(2,3)  to[short] (3,3) to[C=$C_{in}$] (4,3) to[short] (5.5,3) 
+%to[R=$R_G$]  (2,3)  to[short] (3,3) to[C=$c_{in}$] (4,3) to[short] (5.5,3) 
+(6,3) node[npn]{}
+(0,0) to[short] (6,0) to[R=$R_E$] (6,2.5)
+(4.5,0) to[R=$R_2$] (4.5,3) to[R=$R_1$] (4.5,6) to[short] (6,6) to[R=$R_C$] (6,3.5)
+ to[C=$C_{out}$] (9,3.5) to[R=$R_L$] (9,0) to[short] (6,0)
+(7.5,0) to[pC=$C_E$] (7.5,2.5) to[short] (6,2.5)
+(4.5,6)  to[V, v=$V_{cc}$] (0,6) node[ground]{};
+    \end{circuitikz}
+    \caption{Circuito empleado para medir la curva caracter\'istica de un diodo.}
+\end{center}
+\end{figure}
+
+
+Siendo
+\begin{enumerate}
+	\item $ R_1 = 100k\Omega$
+\end{enumerate}
