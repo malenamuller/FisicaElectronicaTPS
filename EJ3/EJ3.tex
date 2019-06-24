@@ -1,5 +1,9 @@
 \section*{\color{olive}Ejercicio 3: Simulaci\'on de la respuesta en frecuencia de un circuito en condiciones iniciales}
 
+Durante este ejercicio se procedi\'o a simular el circuito de la Figura
+\ref{circ3}. Se nos pidi\'o obtener el tipo de singularidad del circuito,
+a qu\'e elemento reactivo se asociaba, valor correspondiente a ese elemento. 
+
 \begin{figure}[H] %!ht 
  \begin{center}
     \begin{circuitikz}[american]
@@ -11,8 +15,53 @@
 (2,3) node[anchor=south] {IN} 
 ;
     \end{circuitikz}
-    \caption{\color{cyan}Circuito empleado para medir la curva caracter\'istica de un diodo.}
+    \caption{Circuito empleado para medir la curva caracter\'istica de un diodo.}
+\label{circ3}
 \end{center}
 \end{figure}
 
-Siendo $R = 200k\Omega$.
+Siendo $R = 200k\Omega$. \\ 
+
+Al realizar la simulaci\'on, se obtuvo un Bode como
+el que se puede ver en la figura \ref{b_3}.
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.25]{../EJ3/Bode}
+\par\end{centering}
+\caption{Bode}
+\label{b_3}
+\end{figure}
+
+Viendo el bode de la figura \ref{b_3}, sabiendo que la amplitud es
+la linea negra y la fase la linea gris, podemos determinar que se
+comporta como un pasabajos y es un polo, ya que la fase cae 90\textdegree .
+Por lo tanto, podemos decir que diodo, a altas frecuencias se comporta
+como un capacitor. Luego de ver este comportamiento, buscamos la hoja
+de datos del 1N4148 y se encontro que la capacidad total del diodo
+es de 4(pF), sin embargo, como se puede ver en la figura \ref{b2_3},
+el bode no coincide completamente con el del circuito de la figura
+\ref{c_3}. Para que coincida perfectamente, debemos usar un capacitor
+de aproximadamente 2(pF). Creemos que la diferencia de capacidad entre
+el valor obtenido en la hoja de datos y e calculado, se debe a un
+modelo equivalente del diodo que no se coincide exactamente con el
+de la realidad, generando pequeñas diferencias como esta.
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.2]{../EJ3/Bode2}
+\par\end{centering}
+\caption{Bode Diodo vs Capacitor nominal}
+\label{b2_3}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
