@@ -1,5 +1,7 @@
 \section*{\color{olive}Ejercicio 1: Medici\'on de curvas caracter\'isticas de diodos}
 
+A continuaci\'on se presentan los circuitos empleados para medir la curva caracter\'istica (corriente en funci\'on de la tensi\'on) de un diodo rectificador, de un diodo zener y de un LED. En los tres casos se coloca una resistencia en serie de $1k\Omega$, con la finaldidad de limitar la corriente que circula por cada uno de ellos.
+
 \begin{figure}[h!]
  \begin{center}
     \begin{circuitikz}
@@ -37,14 +39,14 @@
 	(14,0) to[short] (12,0);
     \end{circuitikz}
 
-    \caption{\color{cyan}Circuitos empleados para medir la curva caracter\'istica de un diodo rectificador, de un diodo zener y de un LED; respectivamente.}
+    \caption{Circuitos empleados para medir la curva caracter\'istica de un diodo rectificador, de un diodo zener y de un LED; respectivamente.}
 \end{center}
 \end{figure}
 
 %%% diodo rectificador
 \subsection*{\color{orange}Diodo rectificador}
 
-A continuaci\'on se presentan los gr\'aficos de la corriente vs. tensi\'on para el caso del diodo rectificador 1N4148. 
+A continuaci\'on se presentan los gr\'aficos obtenidos de la corriente vs. tensi\'on para el caso del diodo rectificador 1N4148. En la figura \ref{med1a} se puede ver la simulaci\'on realizada. En la figura \ref{med1b} se puede ver, a la izquierda, los datos obtenidos del osciloscopio mediante un CSV y a la derecha el gr\'afico de la corriente en funci\'on de la tensi\'on a partir de las tensiones medidas con osciloscopio y del valor conocido de la resistencia.
 
 \begin{figure}[!ht]
 \centering
@@ -103,13 +105,13 @@ A continuaci\'on se presentan los gr\'aficos de la corriente vs. tensi\'on para 
 %\label{med3a}
 %\end{figure}
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=0.5]{../EJ1/LED/datosOsciloscopioZener}
-%\includegraphics[scale=0.5]{../EJ1/DiodoZener/zenerMedido}
-%\caption{Medici\'on de la corriente vs. tensi\'on del LEDr: Datos obtenidos y datos procesados; respectivamente.}
-%\label{med3b}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{../EJ1/LED/datosOsciloscopioLED}
+\includegraphics[scale=0.5]{../EJ1/LED/LEDMedido}
+\caption{Medici\'on de la corriente vs. tensi\'on del LED: Datos obtenidos y datos procesados; respectivamente.}
+\label{med3b}
+\end{figure}
 
 %\begin{figure}[!ht]
 %\centering
