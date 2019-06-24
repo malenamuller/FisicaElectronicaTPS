@@ -88,7 +88,7 @@ Para calcular la funci\'on transferencia de tensi\'on del circuito \ref{circ2}, 
 \end{figure}
 
 A partir del circuito \ref{circ22}, surge que:
-$$\frac{V_{OUT}}{V_{IN}} = \frac{\left( R_0 // R_C // R_L\right) \beta}{ R_{\pi}} = \frac{R_L \cdot (R_0 + R_C) \cdot \beta}{R_{\pi} \cdot (R_0 R_C R_L + R_0 + R_C)} $$
+\begin{equation}\frac{V_{OUT}}{V_{IN}} = \frac{\left( R_0 // R_C // R_L\right) \beta}{ R_{\pi}} = \frac{R_L \cdot (R_0 + R_C) \cdot \beta}{R_{\pi} \cdot (R_0 R_C R_L + R_0 + R_C)} \label{ec1} \end{equation}
 
 A partir de la simulaci\'on, medimos la impedancia de salida del circuito de la figura \ref{circ2} y obtuvimos el valor de $R_0$ del transistor NPN BC547B:\\
 $R_0 = 103 \cdot k\Omega$\\
@@ -96,9 +96,12 @@ A su vez, usando el resto de los valores con los que est\'a modelada la simulaci
 $R_{\pi} = 12,3 k\Omega$\\
 $\beta = 294$
 
-Con los valores anteriores, reemplazando en la ecuaci\'on se obtiene que:
+Con los valores anteriores, reemplazando en la ecuaci\'on \ref{ec1} se obtiene que:
 $$ \frac{V_{OUT}}{V_{IN}} = 2.366\mu $$
 
+Entonces:
+
+\begin{equation} |\frac{V_{OUT}}{V_{IN}} |_{db} = -112 dB \label{ec2} \end{equation}
 
 \subsection*{\color{orange} Simulaci\'on de la funci\'on transferencia de tensi\'on}
 
@@ -106,12 +109,14 @@ $$ \frac{V_{OUT}}{V_{IN}} = 2.366\mu $$
 \begin{figure}[H] %!ht
 \centering
 \includegraphics[scale=0.45]{../EJ2/rtaenfrec}
-\caption{Simulaci\'on del circuito circ2\ref{circ2}}
+\caption{Simulaci\'on del circuito \ref{circ2}}
 \label{simEj2}
 \end{figure}
 
+En la simulaci\'on de la figura \ref{simEj2}, la l\'inea oscura corresponde al m\'odulo de la funci\'on transferencia, mientras que la clara corresponde a su fase. A partir de la l\'inea oscura, se puede ver que a bajas frecuencias, como se modelo el circuito equivalente de pequeña señal, el valor obtenido en la ecuaci\'on \ref{ec2} coincide con la ganancia vista en el diagrama de Bode de la figura \ref{simEj2}
 
-%COMPLETAR
+
+
 
 
 
