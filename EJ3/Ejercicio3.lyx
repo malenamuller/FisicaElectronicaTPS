@@ -1,0 +1,284 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headheight 2cm
+\headsep 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+Ejercicio 3: Simulación de la respuesta en frecuencia de un circuito en
+ condiciones iniciales
+\end_layout
+
+\begin_layout Standard
+Durante este ejercicio se procedió a simular el circuito de la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "c_3"
+
+\end_inset
+
+.
+ Se nos pidió obtener que tipo de singularidad era el circuito, a que elemento
+ reactivo se asociaba, y cual valor era el que debía ser ese elemento.
+ Al realizar la simulación, se obtuvo un Bode como el que se puede ver en
+ la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "b_3"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Circuit.pdf
+	lyxscale 20
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "c_3"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Bode.pdf
+	lyxscale 20
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Bode
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "b_3"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Viendo el bode de la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "b_3"
+
+\end_inset
+
+, sabiendo que la amplitud es la linea negra y la fase la linea gris, podemos
+ determinar que se comporta como un pasabajos y es un polo, ya que la fase
+ cae 90°.
+ Por lo tanto, podemos decir que diodo, a altas frecuencias se comporta
+ como un capacitor.
+ Luego de ver este comportamiento, buscamos la hoja de datos del 1N4148
+ y se encontro que la capacidad total del diodo es de 4(pF), sin embargo,
+ como se puede ver en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "b2_3"
+
+\end_inset
+
+, el bode no coincide completamente con el del circuito de la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "c_3"
+
+\end_inset
+
+.
+ Para que coincida perfectamente, debemos usar un capacitor de aproximadamente
+ 2(pF).
+ Creemos que la diferencia de capacidad entre el valor obtenido en la hoja
+ de datos y e calculado, se debe a un modelo equivalente del diodo que no
+ se coincide exactamente con el de la realidad, generando pequeñas diferencias
+ como esta.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Bode2.pdf
+	lyxscale 20
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Bode Diodo vs Capacitor nominal
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "b2_3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
