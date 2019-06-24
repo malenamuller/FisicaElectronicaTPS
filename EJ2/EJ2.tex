@@ -87,6 +87,10 @@ Para calcular la funci\'on transferencia de tensi\'on del circuito \ref{circ2}, 
 \end{center}
 \end{figure}
 
+En el gr\'afico anterior, siendo:
+$$I_1 = \beta \cdot i_b$$
+con $i_b$ la corriente que circula por la resistencia denominada $R_{\pi}$.
+
 A partir del circuito \ref{circ22}, surge que:
 \begin{equation}\frac{V_{OUT}}{V_{IN}} = \frac{\left( R_0 // R_C // R_L\right) \beta}{ R_{\pi}} = \frac{R_L \cdot (R_0 + R_C) \cdot \beta}{R_{\pi} \cdot (R_0 R_C R_L + R_0 + R_C)} \label{ec1} \end{equation}
 
@@ -113,7 +117,12 @@ Entonces:
 \label{simEj2}
 \end{figure}
 
-En la simulaci\'on de la figura \ref{simEj2}, la l\'inea oscura corresponde al m\'odulo de la funci\'on transferencia, mientras que la clara corresponde a su fase. A partir de la l\'inea oscura, se puede ver que a bajas frecuencias, como se modelo el circuito equivalente de pequeña señal, el valor obtenido en la ecuaci\'on \ref{ec2} coincide con la ganancia vista en el diagrama de Bode de la figura \ref{simEj2}
+En la simulaci\'on de la figura \ref{simEj2}, la l\'inea oscura corresponde al m\'odulo de la funci\'on transferencia, mientras que la clara corresponde a su fase. 
+
+\subsection*{\color{orange} Comparaci\'on entre el c\'alculo y la simulaci\'on de la funci\'on transferencia}
+
+A partir de la l\'inea oscura del diagrama de Bode de la figura \ref{simEj2} (que corresponde al m\'odulo de la ganancia en dB), se puede ver que a bajas frecuencias coincide con  el valor obtenido en la ecuaci\'on \ref{ec2}. Esta comparaci\'on la hacemos a bajas frecuencias, ya que el c\'alculo de la funci\'on transferencia, con el cu\'al se obtuvo que la ganancia es de -112dB, surge de modelar un circuito equivalente del circuito \ref{circ2} para pequeña señal. Esto es, a bajas frecuencias, donde los capacitores se comportan como un "cable".
+
 
 
 
