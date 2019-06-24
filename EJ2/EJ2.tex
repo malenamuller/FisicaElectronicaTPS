@@ -17,7 +17,7 @@
 (2.5,3) node[anchor=south] {IN} 
 (4.5,0) node[ground]{};
     \end{circuitikz}
-    \caption{Circuito empleado para medir la curva caracter\'istica de un transistor NPN BC547B.}
+    \caption{Circuito con un transistor NPN BC547B, para el cual se obtiene la funci\'on transferencia.}
 	\label{circ2}
 \end{center}
 \end{figure}
@@ -66,7 +66,7 @@ Para calcular la funci\'on transferencia de tensi\'on del circuito \ref{circ2}, 
  \begin{center}
     \begin{circuitikz}[american]
     \draw (0,1.5) to[sV,v=$V_{in}$] (0,0) % The voltage source
-(0,1.5) to[R=$R_g$] (0,3)
+(0,1.5) to[R=$R_G$] (0,3)
 (2,0) to[R=$R_1$] (2,3)
 (4,0) to[R=$R_2$] (4,3)
 (6,0) to[R=$R_{\pi}$] (6,3)
@@ -90,7 +90,16 @@ Para calcular la funci\'on transferencia de tensi\'on del circuito \ref{circ2}, 
 A partir del circuito \ref{circ22}, surge que:
 $$\frac{V_{OUT}}{V_{IN}} = \frac{\left( R_0 // R_C // R_L\right) \beta}{ R_{\pi}} = \frac{R_L \cdot (R_0 + R_C) \cdot \beta}{R_{\pi} \cdot (R_0 R_C R_L + R_0 + R_C)} $$
 
-% beta segun spice: 294.3 
+A partir de la simulaci\'on, medimos la impedancia de salida del circuito de la figura \ref{circ2} y obtuvimos el valor de $R_0$ del transistor NPN BC547B:\\
+$R_0 = 103 \cdot k\Omega$\\
+A su vez, usando el resto de los valores con los que est\'a modelada la simulaci\'on:\\
+$R_{\pi} = 12,3 k\Omega$\\
+$\beta = 294$
+
+Con los valores anteriores, reemplazando en la ecuaci\'on se obtiene que:
+$$ \frac{V_{OUT}}{V_{IN}} = 2.366\mu $$
+
+
 \subsection*{\color{orange} Simulaci\'on de la funci\'on transferencia de tensi\'on}
 
 
