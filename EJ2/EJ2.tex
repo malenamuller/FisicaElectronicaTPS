@@ -17,51 +17,27 @@
 (2.5,3) node[anchor=south] {IN} 
 (4.5,0) node[ground]{};
     \end{circuitikz}
-    \caption{\color{cyan}Circuito empleado para medir la curva caracter\'istica de un transistor NPN BC547B.}
+    \caption{\color{cyan}Circuito empleado para medir la curva caracter\'istica de un diodo.}
 	\label{circ2}
 \end{center}
 \end{figure}
 
 
 Siendo
-%\begin{itemize}
-%\item $ R_1 = 100k\Omega$
-%\item $ R_2 = 27k\Omega$
-%\item $ R_C = 11.2k\Omega$
-%\item $ R_E = 3k\Omega$
-%\item $ R_L = 10k\Omega$
-%\item $ C_{in} = 20nF$
-%\item $ C_{out} = 10nF$
-%\item $ C_E = 2\mu F$
-%\end{itemize}
-
-\begin{multicols}{4}
 \begin{itemize}
 \item $ R_1 = 100k\Omega$
 \item $ R_2 = 27k\Omega$
-\end{itemize}
-\columnbreak
-\begin{itemize}
 \item $ R_C = 11.2k\Omega$
-\item $ R_L = 10k\Omega$
-\end{itemize}
-\columnbreak
-\begin{itemize}
 \item $ R_E = 3k\Omega$
-\item $ C_E = 2\mu F$
-\end{itemize}
-\columnbreak
-\begin{itemize}
+\item $ R_L = 10k\Omega$
 \item $ C_{in} = 20nF$
 \item $ C_{out} = 10nF$
+\item $ C_E = 2\mu F$
 \end{itemize}
-\end{multicols}
 
+Se utiliza el modelo h\'ibrido $\pi$ como circuito equivalente del transistor NPN en peque\~na se\~nal, pasivando la fuente de tensi\'on cont\'inua. El siguiente circuito es el equivalente correspondiente al circuito \ref{circ2}:
 
-\subsection*{\color{orange} C\'alculo de la funci\'on transferencia de tensi\'on}
-Para calcular la funci\'on transferencia de tensi\'on del circuito \ref{circ2}, se utiliza el modelo h\'ibrido $\pi$ como circuito equivalente del transistor NPN en peque\~na se\~nal, pasivando la fuente de tensi\'on cont\'inua. Adem\'as, a muy bajas frecuencias se considera que los capacitores se comportan como cortocircuitos. El siguiente circuito es el equivalente correspondiente al circuito \ref{circ2}:
-
-\begin{figure}[H]%!ht
+\begin{figure}[!ht]
  \begin{center}
     \begin{circuitikz}[american]
     \draw (0,1.5) to[sV,v=$V_{in}$] (0,0) % The voltage source
@@ -81,17 +57,15 @@ Para calcular la funci\'on transferencia de tensi\'on del circuito \ref{circ2}, 
 (1,3) node[anchor=south] {IN} 
 (14,3) node[anchor=west] {OUT};
     \end{circuitikz}
-    \caption{\color{cyan}Circuito equivalente empleado para el c\'alculo de la funci\'on transferencia de tensi\'on.}
+    \caption{\color{cyan}Circuito equivalente empleado para el c\'alculo de la funci\'on transferencia de tensio\'on.}
 	\label{circ22}
 \end{center}
 \end{figure}
 
-A partir del circuito \ref{circ22}, surge que:
-$$\frac{V_{OUT}}{V_{IN}} = \frac{\left( R_0 // R_C // R_L\right) \beta}{ R_{\pi}} = \frac{R_L \cdot (R_0 + R_C) \cdot \beta}{R_{\pi} \cdot (R_0 R_C R_L + R_0 + R_C)} $$
 
-\subsection*{\color{orange} Simulaci\'on de la funci\'on transferencia de tensi\'on}
 
-%COMPLETAR
+
+
 
 
 
