@@ -94,7 +94,7 @@ con $i_b$ la corriente que circula por la resistencia denominada $R_{\pi}$.
 A partir del circuito \ref{circ22}, surge que:
 \begin{equation}\frac{V_{OUT}}{V_{IN}} = - \frac{\left( R_0 // R_C // R_L\right) \beta}{ R_{\pi}} = - \frac{\beta \cdot (R_0 \cdot \frac{R_C R_L}{R_C + R_L})}{R_{\pi} \cdot (R_0 + \frac{R_C R_L}{R_C + R_L})}  \label{ec1} \end{equation}
 
-A partir de la simulaci\'on, medimos la impedancia de salida del circuito de la figura \ref{circ2} y obtuvimos el valor de $R_0$ del transistor NPN BC547B:\\
+A partir de la simulaci\'on, calculamos la impedancia de salida del circuito de la figura \ref{circ2} y obtuvimos el valor de $R_0$ del transistor NPN BC547B:\\
 $R_0 = 103 \cdot k\Omega$\\
 A su vez, usando el resto de los valores con los que est\'a modelada la simulaci\'on:\\
 $R_{\pi} = 12,3 k\Omega$\\
@@ -121,7 +121,7 @@ En la simulaci\'on de la figura \ref{simEj2}, la l\'inea oscura corresponde al m
 
 \subsection*{\color{orange} Comparaci\'on entre el c\'alculo y la simulaci\'on de la funci\'on transferencia}
 
-A partir de la l\'inea oscura del diagrama de Bode de la figura \ref{simEj2} (que corresponde al m\'odulo de la ganancia en dB), se puede ver que a frecuencias medias coincide con  el valor obtenido en la ecuaci\'on \ref{ec2}. Esta comparaci\'on la hacemos a frecuencias medias, ya que el c\'alculo de la funci\'on transferencia, con el cu\'al se obtuvo que la ganancia es de 41,592 dB, surge de modelar un circuito equivalente del circuito \ref{circ2} para pequeña señal y para dichas frecuencias, donde los capacitores se comportan como un cable.
+A partir de la l\'inea oscura del diagrama de Bode de la figura \ref{simEj2} (que corresponde al m\'odulo de la ganancia en dB), se puede ver que a frecuencias medias (entre 10kHz y 1MHz, aproximadamente) coincide con  el valor obtenido en la ecuaci\'on \ref{ec2}. Esta comparaci\'on la hacemos a frecuencias medias, ya que el c\'alculo de la funci\'on transferencia, con el cu\'al se obtuvo que la ganancia es de 41,592 dB, surge de modelar un circuito equivalente del circuito \ref{circ2} para pequeña señal y para dichas frecuencias, donde los capacitores se comportan como un cable.
 
 
 

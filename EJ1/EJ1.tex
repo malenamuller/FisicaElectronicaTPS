@@ -65,7 +65,7 @@ A continuaci\'on se presentan los gr\'aficos obtenidos de la corriente vs. tensi
 
 De la figura \ref{med1c} obtenida de la hoja de datos del diodo 1N4148, a nuestro caso corresponde la curva (2).
 
-Se puede ver que la curva caracter\'istica del diodo obtenida con la medici\'on es muy similar tanto a la simulaci\'on, como a la curva de la hoja de datos de dicho componente.
+Se puede ver que la curva caracter\'istica del diodo obtenida con la medici\'on es muy similar tanto a la simulaci\'on, como a la curva de la hoja de datos de dicho componente. En el caso medido se observa que la corriente comienza a aumentar a una tensi\'on levemente mayor que para el caso simulado.
 
 %%% diodo zener
 \subsection*{\color{orange}Diodo zener}
@@ -88,20 +88,33 @@ A continuaci\'on, en la figura \ref{med2b} a la derecha, se presenta un gr\'afic
 %\label{med2c}
 %\end{figure}
 
+En el gr\'afico de la derecha en la figura \ref{med2b} se puede ver que lo medido y la simulaci\'on son pr\'acticamente iguales, con una diferencia pequeña de tensi\'on a la que comienza a circular corriente en inversa. En la medici\'on se observa un encendido mas temprano (a una tensi\'on en inversa de menor m\'odulo que en el caso de la simulaci\'on).
+
 %%% led
 \subsection*{\color{orange}LED}
+
+En la figura \ref{med3b} se observa, como en los dos casos previos, a la izquierda las tensiones obtenidas del osciloscopio para obtener luego la curva de corriente del led en funci\'on de la tensi\'on, que puede verse en azul en el gr\'afico de la derecha. Ese mismo gr\'afico contiene la curva de la simulaci\'on del led rojo. La figura \ref{med3c} presenta la curva mencionada, pero proveniente de la hoja de datos.
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{../EJ1/LED/datosOsciloscopioLED}
 \includegraphics[scale=0.5]{../EJ1/LED/ledSuperpos}
-\caption{Medici\'on de la corriente vs. tensi\'on del LED: Datos obtenidos y datos procesados ; respectivamente.}
+\caption{Medici\'on de la corriente vs. tensi\'on del LED: Datos obtenidos y datos procesados vs simulaci\'on; respectivamente.}
 \label{med3b}
 \end{figure}
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[scale=0.8]{../EJ1/LED/LedDataSheet}
+\includegraphics[scale=0.9]{../EJ1/LED/LedDataSheet}
 \caption{Corriente vs. tensi\'on del LED obtenida de la hoja de datos.}
 \label{med3c}
 \end{figure}
+
+La simulaci\'on dio pr\'acticamente igual a la medici\'on de la corriene en el led, en funci\'on de la tensi\'on.
+
+
+
+
+
+
+
